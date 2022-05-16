@@ -12,12 +12,17 @@ export class Key extends Control{
     this.node.textContent = data;
     this.node.onmousedown = ()=>{
       this.down();
+      document.addEventListener('mouseup', ()=>{
+        this.input();
+        this.up();
+      }, {once: true});
     }
 
-    this.node.onmouseup = ()=>{
+    /*this.node.onmouseup = ()=>{
       this.input();
       this.up();
-    }
+    }*/
+    
 
     this.node.onmouseenter = ()=>{
       this.node.classList.add('keyboard_key__hover');
