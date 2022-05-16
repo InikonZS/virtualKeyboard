@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box;
+}
+
+.keyboard_row{
+  display: flex;
+  user-select: none;
+}
+
+.keyboard_key{
+  margin: 2px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  flex-basis: 100%;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.keyboard_key__twice{
+  flex-basis: 200%;
+}
+
+.keyboard_key__space{
+  flex-basis: 400%;
+}
+
+.keyboard_key__down{
+  transform: scale(0.9);
+}
+
+.keyboard_key__hover{
+  background-color: #222;
+}
+
+
+.keyboard_wrapper{
+  border: solid 1px;
+}
+
+.keyboard_output{
+  border: solid 1px;
+  min-height: 100px;
+}
+
+.hl_1{
+  font-weight: bold;
+}
+
+.codeLine{
+  display: flex;
+}
+
+.lineIndex{
+  width: 50px;
+  text-align: end;
+  margin-right: 10px;
+}

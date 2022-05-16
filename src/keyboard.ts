@@ -3,7 +3,8 @@ import {Output} from "./output";
 import {Board} from "./board";
 //import board from "./langs/en";
 //import board1 from "./langs/ru";
-import {KeyboardState} from './keyboardState';
+import {IKeyboardData, KeyboardState} from './keyboardState';
+import layout from './langs/layout';
 
 export class Keyboard extends Control{
   private output: Output;
@@ -16,12 +17,22 @@ export class Keyboard extends Control{
 
   constructor(parentNode:HTMLElement, state: KeyboardState){
     super(parentNode);
-    state.onChange.add((data)=>{
+    
+    const update = (data: IKeyboardData)=>{
       this.output.content = data.content;
-      this.board.setLanguage(state.languages[data.langIndex]);
-    })
+      const currentBoard = state.languages[data.langIndex];
+      if (data.shift){
+        this.board.setLanguage(currentBoard.shift);
+      } else if (data.caps){
+        this.board.setLanguage(currentBoard.caps);
+      } else {
+        this.board.setLanguage(currentBoard.base);
+      }
+    }
+    state.onChange.add(update)
     this.output = new Output(this.node);
-    this.board = new Board(this.node, state.languages[this.langIndex], state);
+    this.board = new Board(this.node, layout, state);
+
 
     /*this.board.onNextLanguage = ()=>{
       this.langIndex = (this.langIndex + 1) % this.languages.length;
@@ -41,6 +52,8 @@ export class Keyboard extends Control{
       console.log(e.code);
       this.board.handleUp(e.code);
     });
+
+    update(state.data);
   }
 }
 

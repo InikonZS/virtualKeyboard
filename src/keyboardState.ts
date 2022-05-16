@@ -2,9 +2,11 @@ import Signal from "./common/signal";
 import board from "./langs/en";
 import board1 from "./langs/ru";
 
-interface IKeyboardData {
+export interface IKeyboardData {
   content: string;
   langIndex: number;
+  shift: boolean;
+  caps: boolean;
 }
 
 export class KeyboardState {
