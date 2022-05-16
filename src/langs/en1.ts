@@ -1,24 +1,32 @@
-const functional = {
-  "CapsLock": "",
-  "ShiftLeft": "",
-  "Enter": "\n",
-  "Backspace": "",
-  "Tab": "",
-  "ShiftRight": "Shift",
-  "ControlLeft": "Control",
-  "AltLeft": "Alt",
-  "Space": " ",
-  "AltRight": "Alt",
-  "ControlRight": "", 
-  "ArrowUp": "",
-  "ArrowLeft": "",
-  "ArrowDown": "",
-  "ArrowRight": "",
-  "Lang": "Lang"
+/*const base = {
+  'Digit1': 'a',
+  'Digit2': 'b',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
 }
 
+const shift = {
+  'Digit1': 'A',
+  'Digit2': 'B',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
+}
+
+const caps = {
+  'Digit1': '+',
+  'Digit2': '-',
+  'Backspace': 'Backspace',
+  'ShiftLeft': 'Shift',
+  'CapsLock': 'Caps',
+  'Lang': 'Lang'
+}
+*/
+
 const base = {
-  ...functional,
   "Backquote": "`",
   "Digit1": "1",
   "Digit2": "2",
@@ -32,6 +40,8 @@ const base = {
   "Digit0": "0",
   "Minus": "-",
   "Equal": "=",
+  "Backspace": "",
+  "Tab": "",
   "KeyQ": "q",
   "KeyW": "w",
   "KeyE": "e",
@@ -45,6 +55,7 @@ const base = {
   "BracketLeft": "[",
   "BracketRight": "]",
   "Backslash": "\\",
+  "CapsLock": "",
   "KeyA": "a",
   "KeyS": "s",
   "KeyD": "d",
@@ -56,6 +67,8 @@ const base = {
   "KeyL": "l",
   "Semicolon": ";",
   "Quote": "'",
+  "Enter": "\n",
+  "ShiftLeft": "",
   "KeyZ": "z",
   "KeyX": "x",
   "KeyC": "c",
@@ -66,10 +79,20 @@ const base = {
   "Comma": ",",
   "Period": ".",
   "Slash": "/",
+  "ArrowUp": "",
+  "ShiftRight": "Shift",
+  "ControlLeft": "Control",
+  "AltLeft": "Alt",
+  "Space": " ",
+  "AltRight": "Alt",
+  "ControlRight": "",
+  "ArrowLeft": "",
+  "ArrowDown": "",
+  "ArrowRight": "",
+  "Lang": ""
 };
 
 const shift = {
-  ...functional,
   "Backquote": "~",
   "Digit1": "!",
   "Digit2": "@",
@@ -83,6 +106,8 @@ const shift = {
   "Digit0": ")",
   "Minus": "_",
   "Equal": "+",
+  "Backspace": "",
+  "Tab": "",
   "KeyQ": "q",
   "KeyW": "w",
   "KeyE": "e",
@@ -96,6 +121,7 @@ const shift = {
   "BracketLeft": "[",
   "BracketRight": "]",
   "Backslash": "\\",
+  "CapsLock": "",
   "KeyA": "a",
   "KeyS": "s",
   "KeyD": "d",
@@ -107,6 +133,8 @@ const shift = {
   "KeyL": "l",
   "Semicolon": ";",
   "Quote": "'",
+  "Enter": "\n",
+  "ShiftLeft": "",
   "KeyZ": "z",
   "KeyX": "x",
   "KeyC": "c",
@@ -117,10 +145,20 @@ const shift = {
   "Comma": ",",
   "Period": ".",
   "Slash": "/",
+  "ArrowUp": "",
+  "ShiftRight": "Shift",
+  "ControlLeft": "Control",
+  "AltLeft": "Alt",
+  "Space": " ",
+  "AltRight": "Alt",
+  "ControlRight": "",
+  "ArrowLeft": "",
+  "ArrowDown": "",
+  "ArrowRight": "",
+  "Lang": ""
 };
 
 const caps = {
-  ...functional,
   "Backquote": "`",
   "Digit1": "1",
   "Digit2": "2",
@@ -134,6 +172,8 @@ const caps = {
   "Digit0": "0",
   "Minus": "-",
   "Equal": "=",
+  "Backspace": "",
+  "Tab": "",
   "KeyQ": "q",
   "KeyW": "w",
   "KeyE": "e",
@@ -147,6 +187,7 @@ const caps = {
   "BracketLeft": "[",
   "BracketRight": "]",
   "Backslash": "\\",
+  "CapsLock": "",
   "KeyA": "a",
   "KeyS": "s",
   "KeyD": "d",
@@ -158,6 +199,8 @@ const caps = {
   "KeyL": "l",
   "Semicolon": ";",
   "Quote": "'",
+  "Enter": "\n",
+  "ShiftLeft": "",
   "KeyZ": "z",
   "KeyX": "x",
   "KeyC": "c",
@@ -168,5 +211,16 @@ const caps = {
   "Comma": ",",
   "Period": ".",
   "Slash": "/",
+  "ArrowUp": "",
+  "ShiftRight": "",
+  "ControlLeft": "",
+  "AltLeft": "",
+  "Space": " ",
+  "AltRight": "",
+  "ControlRight": "",
+  "ArrowLeft": "",
+  "ArrowDown": "",
+  "ArrowRight": "",
+  "Lang": ""
 };
 export default {base, shift, caps};
