@@ -1,12 +1,12 @@
 import { Key } from "./key";
 
-export class KeyLang extends Key{
+export class KeyBackspace extends Key{
   protected input(){
     //this.onInput(this.data);
     const state = this.state;
     state.data = {
       ...state.data, 
-      langIndex: (state.data.langIndex + 1) % state.languages.length
+      content: state.data.content.slice(0, -1)
     }
   }
 }
